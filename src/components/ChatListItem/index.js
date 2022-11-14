@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         alignItems: "stretch",
         marginHorizontal: 10,
         marginVertical: 5,
-        height: 70
+        height: 70,
     },
     image: {
         width: 60,
