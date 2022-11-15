@@ -50,7 +50,9 @@ const styles = StyleSheet.create({
   name: {
     fontWeight: "bold",
   },
-  content:{},
+  content:{
+    flex: 1
+  },
   subTitle:{
     color: 'gray'
   }
