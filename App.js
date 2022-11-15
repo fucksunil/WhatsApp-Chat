@@ -1,17 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView  } from 'react-native';
-import Navigator from './src/navigation';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import Navigator from "./src/navigation";
+import { Amplify } from "aws-amplify";
+import { withAuthenticator } from "aws-amplify-react-native";
+import awsconfig from "./src/aws-exports";
 
-// import ChatScreen from './src/screens/ChatScreen';
-// import ChatsScreen from './src/screens/ChatsScreen';
+Amplify.configure({ ...awsconfig, Analytics: { disabled: true } });
 
-export default function App() {
-
+function App() {
   return (
     <View style={styles.container}>
-      {/* <ChatsScreen/> */}
-      {/* <ChatScreen/> */}
-      <Navigator/>
+      <Navigator />
       <StatusBar style="auto" />
     </View>
   );
@@ -25,3 +24,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+export default withAuthenticator(App);

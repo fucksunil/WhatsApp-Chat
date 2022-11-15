@@ -8,8 +8,6 @@ import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
 const ContactsListItem = ({ user }) => {
-  const navigation = useNavigation()
-  // console.log(navigation)
   return (
     <Pressable onPress={() => { }} style={styles.container}>
       {/* User Avatar */}
